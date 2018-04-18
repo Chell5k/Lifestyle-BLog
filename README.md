@@ -1,5 +1,3 @@
-[TOC]
-
 # Overview
 The lifestyle blog app will implement a blog for a lifestyle expert who has a large following on other platforms, i.e.,  facebook twitter, etc. The blog owner has decided leave behind conventional social media outlets in favor of developing her own lean, customized platform. She intends to post articles on a number of topics and to categorize the articles appropriately. The blog owner will create topics (or categories), and will create, view, edit and potentially delete posts and categories.
 
