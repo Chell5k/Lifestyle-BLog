@@ -1,5 +1,5 @@
 # Overview
-The lifestyle blog app will implement a blog for a lifestyle expert who has a large following on other platforms, i.e.,  facebook twitter, etc. The blog owner has decided leave behind conventional social media outlets in favor of developing her own lean, customized platform. She intends to post articles on a number of topics and to categorize the articles appropriately. The blog owner will create topics (or categories), and will create, view, edit and potentially delete posts and categories.
+The lifestyle blog app will implement a blog for a lifestyle expert who has a large following on other platforms, i.e.,  facebook twitter, etc. The blog owner has decided to leave behind conventional social media outlets in favor of developing her own lean, customized platform. She intends to post articles on a number of topics and to categorize the articles appropriately. The blog owner will create topics (or categories), and will create, view, edit and potentially delete posts and categories.
 
 ## Wireframes
 Wireframes are in the jpg directory.
@@ -42,7 +42,7 @@ The blog owner has the ability to perform the same functions for the categories 
 
 ## MVP
 The minimum viable product will contain:
-Landing Page
+- Landing Page
 - Main Page containing blog post index
 - Ability to create, view, edit/update, delete a blog post
 - Ability to view all blog posts.
