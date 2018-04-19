@@ -1,3 +1,22 @@
+Table of Contents
+=================
+
+   * [Overview](#overview)
+      * [Wireframes](#wireframes)
+      * [Database Schema](#database-schema)
+      * [Components](#components)
+      * [User Stories](#user-stories)
+         * [Landing Page](#landing-page)
+         * [View Post(s)](#view-posts)
+         * [New Post](#new-post)
+         * [Update Post](#update-post)
+         * [Delete Post](#delete-post)
+         * [Categories](#categories)
+      * [MVP](#mvp)
+      * [Post MVP](#post-mvp)
+
+Created by [gh-md-toc](https://github.com/ekalinin/github-markdown-toc)
+
 # Overview
 The lifestyle blog app will implement a blog for a lifestyle expert who has a large following on other platforms, i.e.,  facebook twitter, etc. The blog owner has decided to leave behind conventional social media outlets in favor of developing her own lean, customized platform. She intends to post articles on a number of topics and to categorize the articles appropriately. The blog owner will create topics (or categories), and will create, view, edit and potentially delete posts and categories.
 
