@@ -1,0 +1,22 @@
+<% include ../../partials/boilerplate %>
+
+<form action="/categories/<%= category.id %>?_method=DELETE" method="POST">
+  <button type="submit" name="button">Delete Category</button>
+  <br>
+</form>
+
+<div class="form-page">
+<div class="add">
+
+<form action="/categories/<%=category.id%>?_method=PUT" method="POST">
+  <p>Category # <%= category.id%></p>
+  <br>
+  <input type="text" name="category" value="<%=category.category%>" /><br>
+  <input type="text" name="description" value="<%=category.description%>" /><br>
+  <input type="submit" value="Update Category" />
+</form>
+</div>
+<a href="/categories"> Back to Categories</a>
+</div>
+
+<% include ../../partials/end %>

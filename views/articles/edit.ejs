@@ -1,0 +1,24 @@
+<% include ../../partials/boilerplate %>
+
+<form action="/articles/<%= article.id %>?_method=DELETE" method="POST">
+  <button type="submit" name="button">Delete article</button>
+  <br>
+</form>
+
+<div class="form-page">
+<div class="add">
+
+<form action="/articles/<%=article.id%>?_method=PUT" method="POST">
+  <p>Article # <%= article.id%></p>
+  <br>
+  <input type="text" name="category_id" value="<%=article.category_id%>" /><br>
+  <input type="text" name="olid" value="<%=article.olid%>" /><br>
+  <input type="text" name="article_date" value="<%=article.article_date%>" /><br>
+  <textarea name="article" rows="10" cols="80"><%=article.article%></textarea>
+  <input type="submit" value="Update Article" />
+</form>
+</div>
+<a href="/articles"> Back to Articles </a>
+</div>
+
+<% include ../../partials/end %>

@@ -1,0 +1,13 @@
+<% include ../../partials/boilerplate %>
+
+<% articles.forEach((article) => { %>
+  <div class="article">
+    <p>
+      Article id: <a href="/articles/<%= article.id%>"><%=article.id%></a>
+    </p>
+    <p>Date: <%=article.article_date%> Category: <%=article.category_id%></p>
+    <p><%=article.article%></p>
+  </div>
+<% }) %>
+
+<% include ../../partials/end %>

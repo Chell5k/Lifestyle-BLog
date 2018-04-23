@@ -1,0 +1,15 @@
+<% include ../../partials/boilerplate %>
+
+  <form action="/articles/<%= article.id%>/edit" class='put' method="GET">
+    <input type="submit" class="editlink" value="Edit">
+  </form>
+
+<div class="article">
+  <h3>Article number: <%=article.id%>
+  <h3>Article date: <%=article.article_date%> category: <%=article.category_id%></h3>
+  <p><%=article.article%></p>
+  <br>
+
+</div>
+
+<% include ../../partials/end %>

@@ -1,0 +1,17 @@
+<% include ../../partials/boilerplate %>
+
+<% categories.forEach((category) => { %>
+  <div class="category">
+      <p>
+        Category id: <a href="/categories/<%= category.id %>"><%=category.id%></a>
+      </p>
+      <p>
+        Category Name: <%=category.category%>
+      </p>
+      <p>
+        Category description: <%=category.description%>
+      </p>
+  </div>
+<% }) %>
+
+<% include ../../partials/end %>

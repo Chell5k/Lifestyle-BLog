@@ -1,0 +1,22 @@
+
+<% include ../../partials/boilerplate %>
+
+<div class="form-page">
+<div class="add">
+
+<form action="/articles" method="POST">
+  <input type="text" name="article_date" placeholder="article_date" /><br>
+  <textarea name="article" rows="8" cols="80"></textarea>
+  <input type="text" name="olid" placeholder="olid" /><br>
+  <select name="category_id">
+    <% categories.forEach((category) => { %>
+      <option value="<%=category.id %>"><%= category.description%> </option>
+    <% }) %>
+  </select> <br>
+  <input type="submit" value="Add Article" />
+</form>
+</div>
+<a href="/articles"> Back to Articles </a>
+</div>
+
+<% include ../../partials/end %>
