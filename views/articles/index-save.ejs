@@ -1,9 +1,9 @@
 <% include ../../partials/boilerplate %>
 
-<div class="flex-article-container" class>
+<div class="flex-container">
 
 <% articles.forEach((article) => { %>
-  <div>
+  <div class="article">
     <p>
       Article id: <a href="/articles/<%= article.id%>"><%=article.id%></a>
     </p>
