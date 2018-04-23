@@ -1,0 +1,46 @@
+body {;
+  font-family: 'Raleway', sans-serif;
+}
+
+.flex-article-container {
+  display: flex;
+  background-color: white;
+  flex-direction: column;
+}
+
+.flex-article-container > div {
+ /* background-color: #f1f1f1;*/
+  background: linear-gradient(#99ddff, #e6f7ff);
+  margin: 10px;
+  padding: 20px;
+  font-size: 20px;
+  border-radius: 25px;
+}
+
+.flex-home-page {
+  display: flex;
+  flex-direction: column; /*stack items*/
+  align-items: center; /*when main axis is vertical, use align-items to justify*/
+}
+
+/*.flex-home-page > div {
+  justify-content: center;
+  width: 75%;
+  height: 200px;
+}*/
+
+
+.div-home-page-img {
+  background-image: url(../img/bluebells-1338396-1278x847.jpg);
+  background-size: cover;
+  width: 80%;
+  height: 400px;
+  /*width: 85%;*/
+  /*object-fit: contain;*/
+  /*display: block;*/
+  /*object-fit: contain;*/
+   /*max-height: 100%;*/
+   /*width: auto;
+   height: auto;*/
+}
+
