@@ -1,0 +1,29 @@
+{
+  "name": "lifestyle-blog",
+  "version": "1.0.0",
+  "description": "Table of Contents =================",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Chell5k/lifestyle-blog.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Chell5k/lifestyle-blog/issues"
+  },
+  "homepage": "https://github.com/Chell5k/lifestyle-blog#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "ejs": "^2.5.9",
+    "express": "^4.16.3",
+    "method-override": "^2.3.10",
+    "morgan": "^1.9.0",
+    "nodemon": "^1.17.3",
+    "pg-promise": "^8.4.0"
+  }
+}
