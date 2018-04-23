@@ -8,7 +8,7 @@ const logger = require('morgan');
 const methodOverride = require('method-override');
 const app = express();
 
-const port = process.env.port || 3000;
+const port = process.env.PORT || 3000;
 
 //Include our router(s)
 const articlesRouter = require('./routes/articlesRouter');
