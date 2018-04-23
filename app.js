@@ -26,10 +26,12 @@ app.use(methodOverride('_method'));
 
 //Set the path to the public resource location
 app.use(express.static(path.join(__dirname, 'public')));
+console.log('app: path - ', path.join(__dirname, 'public'));
 
 //Finally! OK, let's set the route to the home page.
 app.get('/', (req, res)=> {
-  res.send('Hello there');
+ // res.send('Hello there');
+ res.render('home/index');
 });
 
 //Let's use the custom routes we've set up
