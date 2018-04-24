@@ -2,6 +2,7 @@
 
   <div class='blog-name'>
     <h1>THE LIFESTYLE BLOG OF MITSI G.</h1>
+    <h2>ALL ARTICLES</h2>
   </div>
 
 <div class="flex-article-container">
@@ -9,9 +10,10 @@
 <% articles.forEach((article) => { %>
   <div>
     <p>
-      Article id: <a href="/articles/<%= article.id%>"><%=article.id%></a>
+      Article: <a href="/articles/<%= article.id%>"><%=article.id%></a>
     </p>
-    <p>Date: <%=article.article_date%> Category: <%=article.category_id%></p>
+    <p>Date: <%=article.article_date%></p>
+    <p>Category: <%=article.category%></p>
     <p><%=article.article%></p>
   </div>
 <% }) %>

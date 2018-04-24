@@ -1,15 +1,25 @@
 <% include ../../partials/boilerplate %>
 
+<div class='blog-name'>
+  <h1>THE LIFESTYLE BLOG OF MITSI G.</h1>
+  <h2>ARTICLE VIEW</h2>
+</div>
+
+<div class="edit-button">
   <form action="/articles/<%= article.id%>/edit" class='put' method="GET">
     <input type="submit" class="editlink" value="Edit">
   </form>
+</div>
 
-<div class="article">
-  <h3>Article number: <%=article.id%>
-  <h3>Article date: <%=article.article_date%> category: <%=article.category_id%></h3>
-  <p><%=article.article%></p>
-  <br>
+<div class="flex-article-container">
 
+  <div class="article">
+    <h3>Article number: <%=article.id%></h3>
+    <h3>Date: <%=article.article_date%></h3>
+    <h3>Category: <%=article.category%></h3>
+    <p><%=article.article%></p>
+    <br>
+  </div>
 </div>
 
 <% include ../../partials/end %>

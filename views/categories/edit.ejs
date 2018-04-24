@@ -1,22 +1,29 @@
 <% include ../../partials/boilerplate %>
 
-<form action="/categories/<%= category.id %>?_method=DELETE" method="POST">
-  <button type="submit" name="button">Delete Category</button>
-  <br>
-</form>
+  <div class='blog-name'>
+    <h1>THE LIFESTYLE BLOG OF MITSI G.</h1>
+    <h2>UPDATE CATEGORY VIEW</h2>
+  </div>
 
-<div class="form-page">
-<div class="add">
+<div class="flex-edit-container">
 
-<form action="/categories/<%=category.id%>?_method=PUT" method="POST">
-  <p>Category # <%= category.id%></p>
-  <br>
-  <input type="text" name="category" value="<%=category.category%>" /><br>
-  <input type="text" name="description" value="<%=category.description%>" /><br>
-  <input type="submit" value="Update Category" />
-</form>
-</div>
-<a href="/categories"> Back to Categories</a>
-</div>
+  <div class="form-page">
+    <div class="add">
 
+      <form action="/categories/<%=category.id%>?_method=PUT" method="POST">
+        <p>Category #: <%= category.id%></p>
+        <p>Category Name: <input type="text" name="category" value="<%=category.category%>" /></p>
+        <p>Category Description</p>
+        <textarea name="description" rows="5" cols="80"><%=category.description%></textarea><br>
+        <p><input type="submit" value="Update Category" /></p>
+      </form>
+
+      <form action="/categories/<%= category.id %>?_method=DELETE" method="POST">
+        <input type="submit" value="Delete Category"/>
+        <br>
+      </form>
+
+    </div>
+  </div>
+ </div>
 <% include ../../partials/end %>

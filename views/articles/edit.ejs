@@ -1,22 +1,38 @@
 <% include ../../partials/boilerplate %>
 
-<form action="/articles/<%= article.id %>?_method=DELETE" method="POST">
-  <button type="submit" name="button">Delete article</button>
-  <br>
-</form>
-
-<div class="form-page">
-  <div class="add">
-    <form action="/articles/<%=article.id%>?_method=PUT" method="POST">
-      <p>Article # <%= article.id%></p>
-      <br>
-      <input type="text" name="category_id" value="<%=article.category_id%>" /><br>
-      <input type="text" name="olid" value="<%=article.olid%>" /><br>
-      <input type="text" name="article_date" value="<%=article.article_date%>" /><br>
-      <textarea name="article" rows="10" cols="80"><%=article.article%></textarea>
-      <input type="submit" value="Update Article" />
-    </form>
+  <div class='blog-name'>
+    <h1>THE LIFESTYLE BLOG OF MITSI G.</h1>
+    <h2>UPDATE ARTICLE VIEW</h2>
   </div>
-</div>
 
+<div class="flex-edit-container">
+
+  <div class="form-page">
+    <div class="add">
+      <form action="/articles/<%=article.id%>?_method=PUT" method="POST">
+        <p>Article # <%= article.id%></p>
+        <p></p>
+        <p>Optional Open Library Book # (Post MVP): <input type="text" name="olid" value="<%=article.olid%>" /></p>
+        <p>Date: <input type="text" name="article_date" value="<%=article.article_date%>" /></p>
+
+        <p>Current Category: <%= article.category%></p>
+        <p>Category Selection:</p>
+        <select name="category_id">
+          <% categories.forEach((category) => { %>
+            <option value="<%=category.id %>"><%= category.category%> </option>
+          <% }) %>
+        </select>
+
+        <p>Article:</p>
+        <textarea name="article" rows="10" cols="80"><%=article.article%></textarea>
+        <p><input type="submit" value="Update Article" /></p>
+      </form>
+
+      <form action="/articles/<%= article.id %>?_method=DELETE" method="POST">
+        <input type="submit" value="Delete Article"</>
+      </form>
+
+    </div>
+  </div>
+<div>
 <% include ../../partials/end %>

@@ -4,6 +4,7 @@ const db = require('../config/connection');
 function getAllCategories() {
   const queryPromise = db.manyOrNone(`
     SELECT * from categories
+    ORDER BY id ASC
     `);
   return queryPromise;
 }

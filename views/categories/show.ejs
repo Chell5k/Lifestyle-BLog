@@ -1,16 +1,21 @@
 <% include ../../partials/boilerplate %>
 
-  <form action="/categories/<%= category.id%>/edit" class='put' method="GET">
-    <input type="submit" class="editlink" value="Edit">
-  </form>
-
-  <div class="category">
-      <p>
-        Category id: <%=category.id%> Category Name: <%=category.category%>
-      </p>
-      <p>
-        Category description: <%=category.description%>
-      </p>
+  <div class='blog-name'>
+    <h1>THE LIFESTYLE BLOG OF MITSI G.</h1>
+    <h2>VIEW CATEGORY</h2>
   </div>
 
+  <div class="edit-button">
+    <form action="/categories/<%= category.id%>/edit" class='put' method="GET">
+      <input type="submit" class="editlink" value="Edit">
+    </form>
+  </div>
+
+  <div class="flex-category-container">
+    <div class="category">
+        <p>Category id: <%=category.id%></p>
+        <p>Category Name: <%=category.category%></p>
+        <p>Category description: <%=category.description%></p>
+    </div>
+  </div>
 <% include ../../partials/end %>

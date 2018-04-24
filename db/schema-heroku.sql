@@ -1,4 +1,5 @@
 
+\c blog_db;
 
 -- remove any records and start the id sequence back to 1
 DROP TABLE IF EXISTS articles CASCADE;
@@ -13,7 +14,7 @@ CREATE TABLE categories (
 
 CREATE TABLE articles (
   id SERIAL PRIMARY KEY,
-  category_id INT REFERENCES categories (id),
+  category_id INT REFERENCES categories (id) ON DELETE CASCADE,
   olid VARCHAR(20),
   article_date date,
   article TEXT

@@ -4,7 +4,10 @@ const db = require('../config/connection');
 // R - index
 function getAllArticles() {
   const queryPromise = db.manyOrNone(`
-    SELECT * from articles
+    SELECT c.category, a.* from articles a
+    INNER JOIN categories c
+    ON a.category_id = c.id
+    ORDER BY a.id DESC
     `);
   return queryPromise;
 }
@@ -12,8 +15,10 @@ function getAllArticles() {
 // // R - show
 function getOneArticle(id) {
   const queryPromise = db.one(`
-    SELECT * FROM articles
-    WHERE id = $1`, id);
+    SELECT c.category, a.* FROM articles a
+    INNER JOIN categories c
+    ON a.category_id = c.id
+    WHERE a.id = $1`, id);
   return queryPromise;
 }
 

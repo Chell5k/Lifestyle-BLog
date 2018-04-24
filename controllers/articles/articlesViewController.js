@@ -31,7 +31,8 @@ function sendCategories(req, res) {
 function editArticle(req, res) {
   article = res.locals.article;
   res.render(`articles/edit`, {
-    article: res.locals.article
+    article: res.locals.article,
+    categories: res.locals.categories
   })
 }
 

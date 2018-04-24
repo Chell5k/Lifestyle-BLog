@@ -2,6 +2,9 @@
 
   <div class='blog-name'>
     <h1>THE LIFESTYLE BLOG OF MITSI G.</h1>
+    <h2>ALL CATEGORIES</h2>
+
+    <a href="/categories/new">Add Category</a>
   </div>
 
 <div class="flex-category-container">
@@ -9,13 +12,13 @@
   <% categories.forEach((category) => { %>
     <div class="category">
         <p>
-          Category id: <a href="/categories/<%= category.id %>"><%=category.id%></a>
+          Category: <a href="/categories/<%= category.id %>"><%=category.id%></a>
         </p>
         <p>
-          Category Name: <%=category.category%>
+          Name: <%=category.category%>
         </p>
         <p>
-          Category description: <%=category.description%>
+          Description: <%=category.description%>
         </p>
     </div>
   <% }) %>

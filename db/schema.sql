@@ -14,7 +14,7 @@ CREATE TABLE categories (
 
 CREATE TABLE articles (
   id SERIAL PRIMARY KEY,
-  category_id INT REFERENCES categories (id),
+  category_id INT REFERENCES categories (id) ON DELETE CASCADE,
   olid VARCHAR(20),
   article_date date,
   article TEXT
