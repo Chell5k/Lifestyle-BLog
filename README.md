@@ -12,11 +12,16 @@ Table of Contents
          * [Update Post](#update-post)
          * [Delete Post](#delete-post)
          * [Categories](#categories)
+      * [Third Party Modules](#third-party-modules)
+      * [Code Snippet](#code-snippet)
+         * [HTML:](#html)
+         * [Article number: ](#article-number-)
+         * [Date: ](#date-)
+         * [Category: ](#category-)
       * [MVP](#mvp)
       * [Post MVP](#post-mvp)
 
 Created by [gh-md-toc](https://github.com/ekalinin/github-markdown-toc)
-
 # Overview
 The lifestyle blog app will implement a blog for a lifestyle expert who has a large following on other platforms, i.e.,  facebook twitter, etc. The blog owner has decided to leave behind conventional social media outlets in favor of developing her own lean, customized platform. She intends to post articles on a number of topics and to categorize the articles appropriately. The blog owner will create topics (or categories), and will create, view, edit and potentially delete posts and categories.
 
@@ -59,6 +64,46 @@ The user prides herself on her ability to curate experiences and perspectives, a
 ### Categories
 The blog owner has the ability to perform the same functions for the categories by clicking "manage categories" from the navigation bar on the main and subsequent pages. This launches a category index page, and she can select a category view screen by clicking on a category id. She clicks the edit button which launches a screen with editable name and description fields. saves changes by clicking the submit button, or can delete the category altogether by clicking the delete button. She is unable to delete a category which has been assigned to an article, however.
 
+## Third Party Modules
+This project was made possible through usage of the following third-party modules:
+- body-parser
+- ejs
+- express
+- method-override
+- morgan
+- nodemon
+- pg-promise
+
+## Code Snippet
+I was happy to use CSS Flex Box on this project, as it seem to help a great deal with layout.
+
+Here is a sample that was used to organzie the output of a SHOW ONE database call:
+### HTML:
+<div class="flex-article-container">
+
+  <div class="article">
+    <h3>Article number: <%=article.id%></h3>
+    <h3>Date: <%=article.article_date%></h3>
+    <h3>Category: <%=article.category%></h3>
+    <p><%=article.article%></p>
+    <br>
+  </div>
+</div>
+### CSS:
+.flex-article-container {
+  display: flex;
+  background-color: white;
+  flex-direction: column;
+}
+
+.flex-article-container > div {
+  background: linear-gradient(rgba(153, 153, 255, .3), rgba(230, 230, 255, .3));
+  margin: 10px;
+  padding: 20px;
+  font-size: 20px;
+  border-radius: 25px;
+
+
 ## MVP
 The minimum viable product will contain:
 - Landing Page
@@ -67,9 +112,9 @@ The minimum viable product will contain:
 - Ability to view all blog posts.
 - Ability to create, view, edit/update, delete a category.
 - Abilitity to view all categories.
-- Retrieve selected information from a public API to enhance a blog post's content.
 
 ## Post MVP
+- Retrieve selected information from a public API to enhance a blog post's content.
 - Abiility to support multiple users (no authentication or authorization)
 - Ability to filter blog posts by author, category, date.
 - Ability to authenticate and authorize users
