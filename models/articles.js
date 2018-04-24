@@ -22,17 +22,6 @@ function getOneArticle(id) {
   return queryPromise;
 }
 
-
-// let article = {
-//  // id : 7,
-//   category_id: 3,
-//   olid :'5',
-//   article_date :'2018-04-21',
-//   article : 'Is it better to LOVE or to LOVE NOT?? A very provocate thought, indeed....'
-// };
-
-// // C - create
-// //TODO: user will not be passing a category_id or an actual date when live
 function createArticle(article) {
   console.log('articles.js:createArticle: article object', article );
   const query = db.one(`
@@ -44,7 +33,6 @@ function createArticle(article) {
 }
 
 // // U - update
-// //TODO: user will not be passing a category_id or an actual date when live
 function updateArticle(article) {
   console.log('updateArticle: =============================');
   console.log('updateArticle: article object: ', article);
@@ -60,21 +48,6 @@ function updateArticle(article) {
     article );
   return query;
 }
-
-// let article = {
-//   id : '4',
-//   category_id: '3',
-//   olid :'500',
-//   article_date :'2011-02-15',
-//   article : 'Hoping this works?'
-// };
-
-// updateArticle(article)
-// .then(data =>{
-//   console.log(data);
-// }).catch(err => {
-//   console.log(err.message);
-// });
 
 //D - delete
 function deleteArticle(id) {

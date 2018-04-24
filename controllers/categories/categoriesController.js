@@ -1,8 +1,5 @@
 console.log('categoriesController: linked');
-//const articlesDb = require('../../models/articles');
 const categoriesDb = require('../../models/categories');
-
-//console.log(articlesDb);
 
 function getAll(req, res, next) {
   console.log('About to query the DB');
@@ -33,17 +30,6 @@ function getOne(req, res, next) {
     })
 }
 
-// // function getHouses(req, res, next) {
-// //   housesDb.getAllHouses()
-// //     .then(data => {
-// //       res.locals.houses = data;
-// //       next();
-// //     })
-// //     .catch(err=> {
-// //       next(err);
-// //     })
-// // }
-
 function create(req, res, next) {
   console.log('categoriesController:create: About to insert a new category'); //TODO - REMOVE
   categoriesDb.createCategory(req.body)
@@ -56,18 +42,6 @@ function create(req, res, next) {
       next(err);
     })
 }
-
-// THe below is needed to retrieve seed information for the edit screen
-// function edit(req, res) {
-//   articlesDb.getOneArticle(req.params.id)
-//     .then(data=> {
-//       res.locals.article = data;
-//       next();
-//     })
-//     .catch(err=> {
-//       err:err.message
-//     })
-// }
 
 function update(req, res, next) {
   req.body.id = req.params.id;
@@ -96,26 +70,7 @@ module.exports = {
   getAll,
   getOne,
   create,
-  // edit,
   update,
   destroy
- // getHouses
 }
 
-
-
-//==
-// categoriesRouter.route('/')
-//   .get(categoriesController.getAll, categoriesViewController.sendcategories, sendError)
-//   .post(categoriesController.create, categoriesViewController.sendCreateACategory)
-
-// categoriesRouter.route('/new')
-//   .get(categoriesController.getCategory, categoriesViewController.sendCategory)
-
-// categoriesRouter.route('/:id')
-//   .get(categoriesController.getOne, categoriesViewController.sendOneCategory)
-//   .put(categoriesController.update)
-//   .delete(categoriesController.destroy, categoriesViewController.deleteCategory)
-
-// categoriesRouter.route('/:id/edit')
-// .get(categoriesController.getOne, categoriesController.getCategories, categoriesViewController.editCategory)

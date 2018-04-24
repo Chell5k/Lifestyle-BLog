@@ -9,7 +9,7 @@ function sendArticles(req, res) {
 
 function sendOneArticle(req, res) {
   console.log('I send one successful response');
-  console.log('articlesViewController - sendOneArticle - res.locals', res.locals); // TODO REMOVE
+  console.log('articlesViewController - sendOneArticle - res.locals', res.locals);
   res.render('articles/show', {
     article: res.locals.article
   })

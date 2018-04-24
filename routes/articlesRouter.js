@@ -30,5 +30,4 @@ articlesRouter.route('/:id')
 articlesRouter.route('/:id/edit')
 .get(articlesController.getOne, articlesController.getCategories, articlesViewController.editArticle)
 
-
 module.exports = articlesRouter;

@@ -2,8 +2,6 @@ console.log('articlesController: linked');
 const articlesDb = require('../../models/articles');
 const categoriesDb = require('../../models/categories');
 
-//console.log(articlesDb);
-
 function getAll(req, res, next) {
   console.log('About to query the DB');
   articlesDb.getAllArticles()
@@ -44,11 +42,11 @@ function getCategories(req, res, next) {
 }
 
 function create(req, res, next) {
-  console.log('articlesController:create: About to insert a new article'); //TODO - REMOVE
+  console.log('articlesController:create: About to insert a new article');
   articlesDb.createArticle(req.body)
     .then(data => {
       res.locals.newArticle = data;
-      console.log('articlesController:create:', res.locals); //TODO - REMOVE
+      console.log('articlesController:create:', res.locals);
       next();
     })
     .catch(err=> {
@@ -89,7 +87,6 @@ function destroy(req, res) {
     .then(() => {
     console.log('articlesController:successful deletion.');
       res.redirect('/articles');
- //   next();
     })
     .catch(err => {
       res.status(500).json({

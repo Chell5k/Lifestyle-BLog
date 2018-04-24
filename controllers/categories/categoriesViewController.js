@@ -1,4 +1,5 @@
 console.log('categoriesViewController: linked');
+
 // index
 function sendCategories(req, res) {
   console.log('I send successful responses');
@@ -20,30 +21,23 @@ function sendCreateCategory(req, res) {
   res.redirect(`categories/${category.id}`);
 }
 
+// // redirect after creating or editing...
 // function redirectTo_sendOneCategory(req, res) {
-//   console.log('redirecting to /categories/' + res.locals.quote.quotes_id);
-//   res.redirect(`/categories/${res.locals.category.id}`)
+//   console.log('redirecting to /categories/show');
+//   res.redirect(`/categories/show`)
 // }
 
-// redirect after creating or editing...
-function redirectTo_sendOneCategory(req, res) {
-  console.log('redirecting to /categories/show');
-  res.redirect(`/categories/show`)
-}
-
-// redirect after ????
-function redirectTo_sendCategories(req, res) {
-  console.log('redirecting to /categories/index');
-  res.redirect('/categories/index')
-}
-
+// // redirect after ????
+// function redirectTo_sendCategories(req, res) {
+//   console.log('redirecting to /categories/index');
+//   res.redirect('/categories/index')
+// }
 
 function sendNewCategory(req, res) {
   res.render('categories/new', {
     categories: res.locals.newCategory,
   })
 }
-
 
 function editCategory(req, res) {
   category = res.locals.category;

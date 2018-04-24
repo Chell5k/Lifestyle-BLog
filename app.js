@@ -28,9 +28,8 @@ app.use(methodOverride('_method'));
 app.use(express.static(path.join(__dirname, 'public')));
 console.log('app: path - ', path.join(__dirname, 'public'));
 
-//Finally! OK, let's set the route to the home page.
+//Let's set the route to the home page.
 app.get('/', (req, res)=> {
- // res.send('Hello there');
  res.render('home/index');
 });
 

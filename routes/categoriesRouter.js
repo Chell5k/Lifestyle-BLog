@@ -24,12 +24,8 @@ categoriesRouter.route('/:id')
   .get(categoriesController.getOne, categoriesViewController.sendOneCategory)
   .put(categoriesController.update)
   .delete(categoriesController.destroy)
-//  .delete(categoriesController.destroy, categoriesViewController.deleteCategory)
 
-// categoriesRouter.route('/:id/edit')
-// .get(categoriesController.getOne, categoriesController.getCategories, categoriesViewController.editCategory)
 categoriesRouter.route('/:id/edit')
 .get(categoriesController.getOne, categoriesViewController.editCategory)
-
 
 module.exports = categoriesRouter;
