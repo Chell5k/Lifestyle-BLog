@@ -1,19 +1,18 @@
 <% include ../../partials/boilerplate %>
+<% include ../../partials/reg-header %>
 
-  <div class='blog-name'>
-    <h1>THE LIFESTYLE BLOG OF MITSI G.</h1>
-    <h2>UPDATE ARTICLE VIEW</h2>
-  </div>
+  <p>
+   Edit Article
+  </p>
+</header>
 
-<div class="flex-edit-container">
-
-  <div class="form-page">
+<main>
     <div class="add">
       <form action="/articles/<%=article.id%>?_method=PUT" method="POST">
         <p>Article # <%= article.id%></p>
         <p></p>
         <p>Optional Open Library Book # (Post MVP): <input type="text" name="olid" value="<%=article.olid%>" /></p>
-        <p>Date: <input type="text" name="article_date" value="<%=article.article_date%>" /></p>
+        <p>Date: <input type="date" name="article_date" value="<%=article.article_date%>" /></p>
 
         <p>Current Category: <%= article.category%></p>
         <p>Category Selection:</p>
@@ -33,6 +32,6 @@
       </form>
 
     </div>
-  </div>
-<div>
+</main>
+
 <% include ../../partials/end %>

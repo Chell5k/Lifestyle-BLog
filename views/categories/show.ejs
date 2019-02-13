@@ -1,9 +1,10 @@
 <% include ../../partials/boilerplate %>
+<% include ../../partials/reg-header %>
 
-  <div class='blog-name'>
-    <h1>THE LIFESTYLE BLOG OF MITSI G.</h1>
-    <h2>VIEW CATEGORY</h2>
-  </div>
+  <p>
+    Category Details
+  </p>
+</header>
 
   <div class="edit-button">
     <form action="/categories/<%= category.id%>/edit" class='put' method="GET">
@@ -11,11 +12,15 @@
     </form>
   </div>
 
-  <div class="flex-category-container">
-    <div class="category">
-        <p>Category id: <%=category.id%></p>
-        <p>Category Name: <%=category.category%></p>
-        <p>Category description: <%=category.description%></p>
+  <main>
+    <div class="category-list">
+      <article>
+          <header>
+            <h2><%=category.category%></h2>
+          </header>
+        <p><%=category.description%></p>
+      </article>
     </div>
-  </div>
+  </main>
+
 <% include ../../partials/end %>

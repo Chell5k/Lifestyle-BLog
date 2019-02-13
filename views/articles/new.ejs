@@ -1,17 +1,15 @@
-
 <% include ../../partials/boilerplate %>
+<% include ../../partials/reg-header %>
 
-  <div class='blog-name'>
-    <h1>THE LIFESTYLE BLOG OF MITSI G.</h1>
-    <h2>NEW ARTICLE VIEW</h2>
-  </div>
+   New Article
+  </p>
+</header>
 
-<div class="flex-edit-container">
-  <div class="form-page">
+<main>
     <div class="add">
 
     <form action="/articles" method="POST">
-      <p><input type="text" name="article_date" placeholder="Date" /></p>
+      <p><input type="date" name="article_date" placeholder="Date" /></p>
       <textarea name="article" rows="8" cols="80" placeholder="Enter article here"></textarea>
       <p>Optional Open Library Book # (Post MVP):</p>
       <p><input type="text" name="olid" placeholder="olid" /></p>
@@ -25,6 +23,6 @@
     </form>
 
     </div>
-  </div>
-</div>
+</main>
+
 <% include ../../partials/end %>

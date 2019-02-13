@@ -1,22 +1,33 @@
 <% include ../../partials/boilerplate %>
+<% include ../../partials/reg-header %>
 
-  <div class='blog-name'>
-    <h1>THE LIFESTYLE BLOG OF MITSI G.</h1>
-    <h2>ALL ARTICLES</h2>
+   All Articles
+  </p>
+</header>
+
+<main>
+  <div class="article-list">
+    <% articles.forEach((article) => { %>
+      <article>
+        <header>
+          <h2>
+            <a href="/articles/<%= article.id%>"><%=article.category%></a>
+          </h2>
+          <p>
+            Post from <%=article.article_date%> by mitsi g.
+          </p>
+        </header>
+        <p>
+          <%=article.article%>
+        </p>
+      </article>
+    <% }) %>
   </div>
+  <aside>
+    <p>The Daily Cats. Because life is better with cats.</p>
+    <div class="featured"></div>
+    <div class="featured"></div>
+  </aside>
+</main>
 
-<div class="flex-article-container">
-
-<% articles.forEach((article) => { %>
-  <div>
-    <p>
-      Article: <a href="/articles/<%= article.id%>"><%=article.id%></a>
-    </p>
-    <p>Date: <%=article.article_date%></p>
-    <p>Category: <%=article.category%></p>
-    <p><%=article.article%></p>
-  </div>
-<% }) %>
-
-</div>
 <% include ../../partials/end %>

@@ -1,107 +1,250 @@
-body {;
-  font-family: 'Raleway', sans-serif;
-}
-/*-------------*/
-/*Landing Page */
-/*-------------*/
-.flex-home-page {
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+*
+* Name: style.css
+*
+*
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+body {
+  margin: 0;
+  box-sizing: border-box;
   display: flex;
-  flex-direction: column; /*stack the heading div and image div*/
-  align-items: center; /*when main axis is vertical, use align-items to justify*/
+  flex-direction: column;
+  /*justify-content: center;*/
+  align-items: center;
+
+  color: #999;
+  font-family: 'Merriweather', serif;
+  font-weight: 300;
 }
 
-.div-home-page-img {
-  background-image: url(../img/bluebells-1338396-1278x847.jpg);
+* {
+  box-sizing: inherit;
+  font-family: 'Merriweather', serif;
+  font-weight: 300;
+}
+
+
+/* * * * * * * * * * * * * * * * * *
+* Set width of body's flex
+* child elements
+* * * * * * * * * * * * * * * * * */
+body > main,
+body > header,
+body > nav,
+body > footer {
+  width: 60%;
+}
+
+/* * * * * * * * * * * * * * * * * *
+* navbar
+*
+* * * * * * * * * * * * * * * * * */
+
+
+nav {
+/*  display: flex;
+  flex-direction: row;*/
+  /*border: 1px dashed blue;*/
+  margin-top: 0;
+  background-color: #f1f1f1;
+}
+nav ul {
+  width: 100%;
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  padding: 0 1em;
+
+}
+
+nav ul li {
+  padding-right: 20px;
+}
+
+nav ul li:last-child {
+  /*border: 1px solid red;*/
+  margin-left: auto;
+  padding-right: 0;
+
+}
+
+nav a {
+  text-decoration: none;
+  color: #c08;
+  color: #c79b62;
+}
+
+nav ul li:last-child a {
+  color: inherit;
+  color: #b8aaa6;
+
+}
+
+/* * * * * * * * * * * * * * * * * *
+* header layout
+*
+*
+*
+* * * * * * * * * * * * * * * * * */
+body > header {
+  /*border: 1px dotted brown;*/
+  border-bottom: 1px solid #e5e5e5;
+}
+
+body > header h1 {
+  font-size: 2em;
+  font-weight: 400;
+  line-height: 1.7;
+  color: #b8aaa6;
+}
+
+/* * * * * * * * * * * * * * * * * *
+* landing-page: layout
+*
+*
+*
+* * * * * * * * * * * * * * * * * */
+/* This set up for <main> works for both landing page
+and article page.*/
+
+main {
+  /*border: 1px solid pink;*/
+  /*padding: 10px;*/
+  display: flex;
+  flex-direction: row;
+  min-height: 60vh;
+
+}
+main.landing  {
+  background: url(../img/proud-kitty.jpg);
+  /*border: 1px dashed purple;*/
   background-size: cover;
-  box-shadow: 6px 9px 14px 0px rgba(0,0,0,0.75);
-  width: 80%;
-  height: 400px;
+  background-repeat: no-repeat;
+  background-position: center;
 }
-/*-------------*/
-/*Articles     */
-/*-------------*/
-.flex-article-container {
+span.blogger {
+ color: #c79b62;
+}
+/* * * * * * * * * * * * * * * * * *
+* article-page: layout
+*
+*
+*
+* * * * * * * * * * * * * * * * * */
+
+/* <main> holds a list and an aside*/
+
+
+.article-list,
+.category-list {
+  /*border: 1px dashed green;*/
   display: flex;
-  background-color: white;
   flex-direction: column;
+  width: 65%;
+  padding-right: 1em;
+  border-right: 1px solid #e5e5e5;
 }
 
-.flex-article-container > div {
-  background: linear-gradient(rgba(153, 153, 255, .3), rgba(230, 230, 255, .3));
-  margin: 10px;
-  padding: 20px;
-  font-size: 20px;
-  border-radius: 25px;
-}
-/*-------------*/
-/*Categories   */
-/*-------------*/
-.flex-category-container {
-  display: flex;
-  background-color: white;
-  flex-direction: column;
-}
-
-.flex-category-container > div {
-  background: linear-gradient(rgba(215, 189, 226, .5), rgba(245, 238, 248, .5));
-  margin: 10px;
-  padding: 20px;
-  font-size: 20px;
-  border-radius: 25px;
-}
-/*-------------*/
-/*NavBar       */
-/*-------------*/
-nav.main-nav {
-  display: table;
-  margin: 0 auto;
-}
-
-ul.main-nav-ul {
-    list-style-type: none; /* remove bullets*/
-}
-
-.main-nav-ul li {
-  display: inline-block;
-  margin: 5px;
-}
-
-.main-nav-ul li a:hover {
-    background-color: rgba(220,220,220, 1);
-}
-
-div.blog-name {
-  text-align: center;
-  /*background: lightgrey;*/
-}
-/*---------------------*/
-/*Edit/Add input areas */
-/*---------------------*/
-/*.add:focus {
-  background: yellow;
-  color: red;
+/*.article-list p:first-child {
+  color: inherit;
+  font-size: 1.7em;
+  font-weight: 300;
+  line-height: 1.5;
+  margin: 0;
 }*/
 
-.flex-edit-container {
+article {
+  min-height: 2em;
+  /*background-color: #ccc;*/
+  width: 100%;
+  margin-bottom: 2em;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  font-size: 20px;
 }
 
-input {
-  font-size: 20px;
-}
-textarea {
-  font-size: 15px;
-}
-button {
-  font-size: 15px;
-}
-option {
-  font-size: 15px;
+article h2
+/*article a */
+{
+  color: #c79b62;
+  font-size: 1.7em;
+  font-weight: 300;
+  line-height: 1.5;
+  margin: 0;
+  /*border: 1px dashed red;*/
 }
 
-.edit-button {
+article a {
+  font-size: 1em;
+  text-decoration: none;
+  color: #c79b62;
+}
+
+/*article header p:nth-of-type(1) {
+  font-size: .8em;
+}*/
+article header {
+  display: flex;
+  justify-content: space-between;
+}
+
+article p {
+  text-align: justify;
+  margin-top: .5em;
+  margin-bottom: .5em;
+}
+article header p:first-of-type {
+  font-size: .8em;
+  margin-bottom: 0;
+
+}
+aside {
+  width: 30%;
+  height: 200px;
+  /*border: 1px dashed purple;*/
+  /*align-self: flex-end;*/
+  margin-left: auto;
+}
+
+aside div:first-of-type {
+  width:100%;
+  min-height: 100%;
+    /*border: 1px dashed purple;*/
+  background: url(../img/orange-tabby.jpg);
+   background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-bottom: 20px;
+}
+aside div:last-of-type {
+  width:100%;
+  min-height: 100%;
+    /*border: 1px dashed purple;*/
+  background: url(../img/looks-like-a-maine.jpg);
+   background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* * * * * * * * * * * * * * * * * *
+* footer layout
+*
+*
+*
+* * * * * * * * * * * * * * * * * */
+
+footer {
+  border-top: 1px solid #e5e5e5;
+  height: 20vh;
+/*  border: 1px dashed orange;*/
+  /*background-color: #f1f1f1;*/
+}
+footer p {
+  height: 100%;
+  padding-top: 3vh;
+  font-size: .8em;
+}
+
+footer.landing p {
   text-align: center;
 }

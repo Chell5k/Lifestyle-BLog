@@ -1,16 +1,19 @@
 <% include ../../partials/boilerplate %>
+<% include ../../partials/reg-header %>
 
-  <div class='blog-name'>
-    <h1>THE LIFESTYLE BLOG OF MITSI G.</h1>
-    <h2>NEW CATEGORY VIEW</h2>
-  </div>
-<div class="flex-edit-container">
+<p>New Category</p>
+</header>
+
+<main>
+<div class="add">
   <form class="create-category" action="/categories" method="post">
     <p><input type="text" name="category" placeholder="New category name" /></p>
     <textarea name="description" rows="5" cols="80" placeholder="Enter description"></textarea>
     <p><button type="submit">Submit</button></p>
   </form>
 </div>
+</main>
+
 <% include ../../partials/end %>
 
 
