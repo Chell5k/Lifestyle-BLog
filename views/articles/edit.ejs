@@ -17,13 +17,17 @@
 
         <p>Date: <input type="date" name="article_date" value="<%=article.value_date%>" /></p>
 
-        <p>Current Category: <%= article.category%></p>
-        <p>Category Selection:</p>
+        <p>Category Selection:
         <select name="category_id">
           <% categories.forEach((category) => { %>
-            <option value="<%=category.id %>"><%= category.category%> </option>
+            <% if (category.id === article.category_id  ) { %>
+              <option selected value="<%=category.id %>"><%= category.category%> </option>
+            <% } else {  %>
+              <option value="<%=category.id %>"><%= category.category%> </option>
+            <% } %>
           <% }) %>
         </select>
+        </p>
 
         <p>Article:</p>
         <textarea name="article" rows="10" cols="80"><%=article.article%></textarea>

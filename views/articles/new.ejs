@@ -11,19 +11,19 @@
     <div class="view">
 
     <form action="/articles" method="POST">
-      <p><input type="date" name="article_date" placeholder="Date" /></p>
+      <p> Date: <input type="date" id="today" name="article_date" /></p>
 
 
-      <div style="display: none"><p>Optional Open Library Book # (Post MVP):</p>
+      <div class="hide"><p>Optional Open Library Book # (Post MVP):</p>
       <p><input type="text" name="olid" placeholder="olid" /></p></div>
 
-      <p>Category Selection:</p>
+      <p>Category Selection:
       <select name="category_id">
         <% categories.forEach((category) => { %>
           <option value="<%=category.id %>"><%= category.category%> </option>
         <% }) %>
       </select>
-      <br>
+      </p>
       <p>Article:</p>
       <textarea name="article" rows="8" cols="80" placeholder="Enter article text"></textarea>
       <p><input type="submit" class="button" value="Submit" /></p>
@@ -37,4 +37,4 @@
   </aside>
 </main>
 
-<% include ../../partials/end %>
+<% include ../../partials/date-end %>

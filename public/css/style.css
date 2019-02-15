@@ -286,9 +286,9 @@ body select {
   background: url(../img/up-down-arrow-small-512.png) right center no-repeat;
   background-size: 15%;
   background-color: #fff;
-  border: .15rem solid #e5e5e5;
+  border: .15em solid #e5e5e5;
   border-radius: .8em;
-  display: block;
+  /*display: block;*/
   line-height: 1.2em;
   font-size: 1em;
   padding: .6em 4.5em .6em .85em;
@@ -307,17 +307,32 @@ input[type="text"]
   height: 2.5em;
   font-size: 1em;
   color: #999;
-  text-align: center;
-  border: .15rem solid #e5e5e5;
+  padding-left: 1em;
+  border: .15em solid #e5e5e5;
   border-radius: .8rem;
 }
 
 textarea {
-  border: .15rem solid #e5e5e5;
-  border-radius: .8rem;
+  width: 80%;
+  border: .15em solid #e5e5e5;
+  border-radius: .8em;
+  font-size: .85em;
+  color: #999;
+  padding: 1em;
 }
 .hide {
   display: none;
+}
+
+/* Style placeholder text*/
+
+::placeholder {
+  color: #999;
+  opacity: 1;
+}
+
+textarea::placeholder {
+  font-size: 1.2em;
 }
 
 /* * * * * * * * * * * * * * * * * *
