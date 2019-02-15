@@ -1,26 +1,34 @@
 <% include ../../partials/boilerplate %>
 <% include ../../partials/reg-header %>
 
-<p>Edit Cateogry</p>
+<p>
+  Edit Cateogry
+</p>
+
 </header>
 
 
-  <main>
-    <div class="add">
+  <main class="edit-one">
+    <div class="view">
 
       <form action="/categories/<%=category.id%>?_method=PUT" method="POST">
         <p>Category #: <%= category.id%></p>
         <p>Category Name: <input type="text" name="category" value="<%=category.category%>" /></p>
         <p>Category Description</p>
-        <textarea name="description" rows="5" cols="80"><%=category.description%></textarea><br>
-        <p><input type="submit" value="Update Category" /></p>
+        <textarea name="description" rows="8" cols="80"><%=category.description%></textarea><br>
+        <p><input type="submit" class="button" value="Update" /></p>
       </form>
 
       <form action="/categories/<%= category.id %>?_method=DELETE" method="POST">
-        <input type="submit" value="Delete Category"/>
+        <input type="submit" class="button" value="Delete"/>
         <br>
       </form>
 
     </div>
+    <aside>
+      <p>The Daily Cats. Just for fun.</p>
+      <div class="featured"></div>
+      <div class="featured"></div>
+    </aside>
   </main>
 <% include ../../partials/end %>

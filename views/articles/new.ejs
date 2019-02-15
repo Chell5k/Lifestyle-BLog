@@ -1,28 +1,40 @@
 <% include ../../partials/boilerplate %>
 <% include ../../partials/reg-header %>
 
+  <p>
    New Article
   </p>
+
 </header>
 
-<main>
-    <div class="add">
+<main class="add-one">
+    <div class="view">
 
     <form action="/articles" method="POST">
       <p><input type="date" name="article_date" placeholder="Date" /></p>
-      <textarea name="article" rows="8" cols="80" placeholder="Enter article here"></textarea>
-      <p>Optional Open Library Book # (Post MVP):</p>
-      <p><input type="text" name="olid" placeholder="olid" /></p>
+
+
+      <div style="display: none"><p>Optional Open Library Book # (Post MVP):</p>
+      <p><input type="text" name="olid" placeholder="olid" /></p></div>
+
       <p>Category Selection:</p>
       <select name="category_id">
         <% categories.forEach((category) => { %>
           <option value="<%=category.id %>"><%= category.category%> </option>
         <% }) %>
-      </select> <br>
-      <p><input type="submit" value="Add Article" /></p>
+      </select>
+      <br>
+      <p>Article:</p>
+      <textarea name="article" rows="8" cols="80" placeholder="Enter article text"></textarea>
+      <p><input type="submit" class="button" value="Submit" /></p>
     </form>
 
     </div>
+    <aside>
+      <p>The Daily Cats. Occasionally cuddly.</p>
+      <div class="featured"></div>
+      <div class="featured"></div>
+  </aside>
 </main>
 
 <% include ../../partials/end %>

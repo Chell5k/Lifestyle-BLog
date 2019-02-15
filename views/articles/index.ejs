@@ -1,11 +1,13 @@
 <% include ../../partials/boilerplate %>
 <% include ../../partials/reg-header %>
 
+  <p>
    All Articles
   </p>
+
 </header>
 
-<main>
+<main class="list">
   <div class="article-list">
     <% articles.forEach((article) => { %>
       <article>
@@ -13,12 +15,12 @@
           <h2>
             <a href="/articles/<%= article.id%>"><%=article.category%></a>
           </h2>
-          <p>
-            Post from <%=article.article_date%> by mitsi g.
-          </p>
         </header>
         <p>
           <%=article.article%>
+        </p>
+        <p>
+          Post from <%=article.good_date%> by <span class="blogger">mitsi g</span>., filed under <a href="/categories/<%=article.category_id%>"><%=article.category%>.</a>
         </p>
       </article>
     <% }) %>

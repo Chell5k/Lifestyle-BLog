@@ -1,27 +1,41 @@
 <% include ../../partials/boilerplate %>
 <% include ../../partials/reg-header %>
 
+  <p>
    Article Details
   </p>
+
 </header>
 
-<div class="edit-button">
-  <br>
-  <form action="/articles/<%= article.id%>/edit" class='put' method="GET">
-    <input type="submit" class="editlink" value="Edit">
-  </form>
-</div>
 
-  <main>
-    <header>
-      <h2><%=article.category%></h2>
-      <p>
-        Post from <%=article.article_date%> by mitsi g.
-      </p>
+
+  <main class="show-one">
+    <div class="article-list">
+      <article>
+      <header>
+        <h2><%=article.category%></h2>
+      </header>
       <p><%=article.article%></p>
-      <br>
-    </header>
+      <p>
+        Post from <%=article.good_date%>, by <span class="blogger">mitsi g</span>.
+      </p>
+
+      <div class="edit-button">
+        <br>
+        <form action="/articles/<%= article.id%>/edit" method="GET">
+          <input type="submit" class="button" value="Edit">
+        </form>
+      </div>
+
+    </article>
+  </div>
+
+    <aside>
+    <p>The Daily Cats. For inspiration.</p>
+    <div class="featured"></div>
+    <div class="featured"></div>
+  </aside>
 </main>
-</div>
+
 
 <% include ../../partials/end %>

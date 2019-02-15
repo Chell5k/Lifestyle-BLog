@@ -4,7 +4,9 @@ const db = require('../config/connection');
 // R - index
 function getAllArticles() {
   const queryPromise = db.manyOrNone(`
-    SELECT c.category, a.* from articles a
+    SELECT c.category, a.*,
+    to_char(article_date, 'FMMonth DD, YYYY') as good_date
+    from articles a
     INNER JOIN categories c
     ON a.category_id = c.id
     ORDER BY a.id DESC
@@ -15,7 +17,10 @@ function getAllArticles() {
 // // R - show
 function getOneArticle(id) {
   const queryPromise = db.one(`
-    SELECT c.category, a.* FROM articles a
+    SELECT c.category, a.*,
+    to_char(article_date, 'FMMonth DD, YYYY') as good_date,
+    to_char(article_date, 'YYYY-MM-DD') as value_date
+    FROM articles a
     INNER JOIN categories c
     ON a.category_id = c.id
     WHERE a.id = $1`, id);

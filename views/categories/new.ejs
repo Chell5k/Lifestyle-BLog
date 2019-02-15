@@ -1,17 +1,25 @@
 <% include ../../partials/boilerplate %>
 <% include ../../partials/reg-header %>
 
-<p>New Category</p>
+<p>
+  New Category
+</p>
+
 </header>
 
-<main>
-<div class="add">
+<main class="add-one">
+<div class="view">
   <form class="create-category" action="/categories" method="post">
     <p><input type="text" name="category" placeholder="New category name" /></p>
-    <textarea name="description" rows="5" cols="80" placeholder="Enter description"></textarea>
-    <p><button type="submit">Submit</button></p>
+    <textarea name="description" rows="8" cols="80" placeholder="Enter description"></textarea>
+    <p><button class="button" type="submit">Submit</button></p>
   </form>
 </div>
+  <aside>
+    <p>The Daily Cats. Occasionally cuddly.</p>
+      <div class="featured"></div>
+      <div class="featured"></div>
+  </aside>
 </main>
 
 <% include ../../partials/end %>

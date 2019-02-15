@@ -4,23 +4,33 @@
   <p>
     Category Details
   </p>
+
 </header>
 
-  <div class="edit-button">
-    <form action="/categories/<%= category.id%>/edit" class='put' method="GET">
-      <input type="submit" class="editlink" value="Edit">
-    </form>
-  </div>
 
-  <main>
+
+  <main class="show-one">
     <div class="category-list">
       <article>
-          <header>
-            <h2><%=category.category%></h2>
-          </header>
+        <header>
+          <h2><%=category.category%></h2>
+        </header>
         <p><%=category.description%></p>
+
+        <div class="edit-button">
+          <br>
+          <form action="/categories/<%= category.id%>/edit" class='put' method="GET">
+            <input type="submit" class="button" value="Edit">
+          </form>
+        </div>
+
       </article>
     </div>
+    <aside>
+      <p>The Daily Cats. For inspiration.</p>
+      <div class="featured"></div>
+      <div class="featured"></div>
+  </aside>
   </main>
 
 <% include ../../partials/end %>
