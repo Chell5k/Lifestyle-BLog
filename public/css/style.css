@@ -348,7 +348,7 @@ textarea::placeholder {
 * * * * * * * * * * * * * * * * * */
 
 main.landing  {
-  background: url(../img/proud-kitty.jpg);
+  background: url(../img/blog-proud-kitty.jpg);
   /*border: 1px dashed purple;*/
   background-size: cover;
   background-repeat: no-repeat;
