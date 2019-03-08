@@ -372,7 +372,7 @@ aside div:first-of-type {
 }
 
 .list aside div:first-of-type {
-  background: url(../img/orange-tabby.jpg);
+  background: url(../img/blog-orange-tabby.jpg);
   background-size: cover;
   background-position: center;
 
@@ -384,32 +384,32 @@ aside div:first-of-type {
 }
 
 .show-one aside div:first-of-type {
-  background: url(../img/kitten-in-grass.jpg);
+  background: url(../img/blog-kitten-in-grass.jpg);
   background-size: cover;
   background-position: center;
 }
 .show-one aside div:last-of-type {
-  background: url(../img/orange-tabby-on-side.jpg);
+  background: url(../img/blog-orange-tabby-on-side.jpg);
   background-size: cover;
   background-position: center;
 }
 .edit-one aside div:first-of-type {
-  background: url(../img/chunlea-ju-459856-unsplash.jpg);
+  background: url(../img/blog-chunlea-ju-459856-unsplash.jpg);
   background-size: cover;
   background-position: center;
 }
 .edit-one aside div:last-of-type {
-  background: url(../img/erik-jan-leusink-739131-unsplash.jpg);
+  background: url(../img/blog-erik-jan-leusink-739131-unsplash.jpg);
   background-size: cover;
   background-position: center;
 }
 .add-one aside div:first-of-type {
-  background: url(../img/yiqun-tang-1330197-unsplash.jpg);
+  background: url(../img/blog-yiqun-tang-1330197-unsplash.jpg);
   background-size: cover;
   background-position: center;
 }
 .add-one aside div:last-of-type {
-  background: url(../img/cat-teal-background.jpg);
+  background: url(../img/blog-cat-teal-background.jpg);
   background-size: cover;
   background-position: center;
 }
